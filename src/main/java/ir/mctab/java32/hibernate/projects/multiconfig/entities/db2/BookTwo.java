@@ -4,6 +4,7 @@ import ir.mctab.java32.hibernate.projects.multiconfig.config.hibernate.Persisten
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,6 +12,7 @@ import javax.persistence.Entity;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString(callSuper = true)
 
 @Entity
 public class BookTwo extends PersistenceEntity<Long> {
