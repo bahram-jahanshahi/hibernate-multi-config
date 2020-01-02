@@ -1,8 +1,6 @@
 package ir.mctab.java32.hibernate.projects.multiconfig.entities.db1.embeddables;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -11,6 +9,9 @@ import javax.persistence.Embedded;
 @Getter
 @Setter
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
+
 @Embeddable
 public class ContactInfo {
 
