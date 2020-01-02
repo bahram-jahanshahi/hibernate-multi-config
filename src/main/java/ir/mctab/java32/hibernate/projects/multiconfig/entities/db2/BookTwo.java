@@ -1,0 +1,23 @@
+package ir.mctab.java32.hibernate.projects.multiconfig.entities.db2;
+
+import ir.mctab.java32.hibernate.projects.multiconfig.config.hibernate.PersistenceEntity;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+
+@Entity
+public class BookTwo extends PersistenceEntity<Long> {
+
+    @Column(nullable = false)
+    private String title;
+
+    @Column(nullable = false)
+    private String isbn;
+}
