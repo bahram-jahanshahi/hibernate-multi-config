@@ -21,6 +21,9 @@ public class BookOneRepository extends CrudRepository<BookOne, Long> {
     private static BookOneRepository bookOneRepository;
 
     public static BookOneRepository getInstance() {
+        if (bookOneRepository == null) {
+            bookOneRepository = new BookOneRepository();
+        }
         return bookOneRepository;
     }
 }
