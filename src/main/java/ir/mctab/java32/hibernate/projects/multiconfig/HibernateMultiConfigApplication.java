@@ -5,6 +5,4 @@ public class HibernateMultiConfigApplication {
     public static void main(String[] args) {
 
     }
-
-
 }
