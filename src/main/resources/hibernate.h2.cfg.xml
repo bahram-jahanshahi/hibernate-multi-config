@@ -3,7 +3,8 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.url">
-            jdbc:h2:mem:test
+            <!--jdbc:h2:mem:sophie-->
+            jdbc:h2:file:C:/h2/sophie
         </property>
         <property name="hibernate.connection.driver_class">org.h2.Driver</property>
         <property name="hibernate.connection.username">sa</property>
