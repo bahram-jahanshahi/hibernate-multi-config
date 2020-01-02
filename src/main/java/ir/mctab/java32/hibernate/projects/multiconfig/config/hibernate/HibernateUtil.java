@@ -8,8 +8,10 @@ public class HibernateUtil {
 
     private static SessionFactory sessionFactoryOne;
     private static SessionFactory sessionFactoryTwo;
+    private static SessionFactory sessionFactoryH2;
     private static Session sessionOne;
     private static Session sessionTwo;
+    private static Session sessionH2;
 
     static {
         sessionFactoryOne = new Configuration()
@@ -20,8 +22,14 @@ public class HibernateUtil {
                 .configure("hibernate.db2.cfg.xml")
                 .buildSessionFactory();
 
+        sessionFactoryH2 = new Configuration()
+                .configure("hibernate.h2.cfg.xml")
+                .buildSessionFactory();
+
+
         sessionOne = sessionFactoryOne.openSession();
         sessionTwo = sessionFactoryTwo.openSession();
+        sessionH2 = sessionFactoryH2.openSession();
     }
 
     public static Session getSessionOne(){
@@ -31,4 +39,6 @@ public class HibernateUtil {
     public static Session getSessionTwo(){
         return sessionTwo;
     }
+
+    public static Session getSessionH2() { return sessionH2; }
 }
